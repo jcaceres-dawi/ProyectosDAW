@@ -7,11 +7,19 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <!-- Enlace Volver -->
+            <div class="mb-4">
+                <a href="/dashboard" class="text-blue-500 hover:text-blue-700 font-medium">
+                    {{ __('Volver') }}
+                </a>
+            </div>
+
             @if(session('status'))
             <div class="bg-green-500 text-white p-4 mb-4 rounded">
                 {{ session('status') }}
             </div>
             @endif
+
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h3 class="text-lg font-semibold mb-4">{{ __("Lista de gastos") }}</h3>
