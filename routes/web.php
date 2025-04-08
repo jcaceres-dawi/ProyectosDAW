@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\DibujoController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,10 @@ Route::resource('chirps', ChirpController::class)
 
 
 Route::resource('expense', ExpenseController::class)->middleware(['auth', 'verified']);
+
+Route::resource('dibujos', DibujoController::class);
+/* Route::get('/', function () {
+    return redirect()->route('dibujos.index');
+}); */
 
 require __DIR__ . '/auth.php';

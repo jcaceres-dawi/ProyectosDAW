@@ -25,6 +25,9 @@
                         <x-nav-link href="{{ url('/html/aseguradora.html') }}" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
                             {{ __('🛡️ Aseguradora') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('dibujos.index')" :active="request()->routeIs('dibujos.index')" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
+                            {{ __('✏️ Dibujos') }}
+                        </x-nav-link>
                     </nav>
                     <div class="flex justify-center items-center">
                         <img src="{{ asset('images/foto-principal.png') }}" alt="DAW" class="h-auto" style="width: 600px;">
