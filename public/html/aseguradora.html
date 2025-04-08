@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aseguradora</title>
+    <link rel="stylesheet" href="../css/aseguradora.css" />
+  </head>
+  <body>
+    <form id="formulario">
+      <label for="nombre" class="titulo">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" />
+
+      <label for="apellidos" class="titulo">Apellidos:</label>
+      <input type="text" name="apellidos" id="apellidos" />
+
+      <label for="dni" class="titulo">DNI:</label>
+      <input type="text" name="dni" id="dni" />
+
+      <label for="correo" class="titulo">Correo:</label>
+      <input type="email" name="correo" id="correo" />
+
+      <label for="telefono" class="titulo">Teléfono:</label>
+      <input type="tel" name="telefono" id="telefono" />
+
+      <label for="codigoPostal" class="titulo">Código postal:</label>
+      <input type="text" name="codigoPostal" id="codigoPostal" />
+
+      <label for="fechaNacimiento" class="titulo">Fecha nacimiento:</label>
+      <input type="date"name="fechaNacimiento"id="fechaNacimiento"/>
+
+      <label for="fechaCarnet" class="titulo">Fecha carnet conducir:</label>
+      <input type="date" name="fechaCarnet" id="fechaCarnet" />
+
+      <label for="fechaMatriculacion" class="titulo">Fecha matriculación:</label>
+      <input type="date" name="fechaMatriculacion" id="fechaMatriculacion" />
+
+      <label for="matricula" class="titulo">Matrícula:</label>
+      <input type="text" name="matricula" id="matricula" />
+
+      <label for="sexo" class="titulo">Sexo:</label>
+      <select name="sexo" id="sexo">
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="region" class="titulo">Región:</label>
+      <select id="region" onchange="actualizarProvincias()">
+        <option value="andalucia">Andalucía</option>
+        <option value="cataluna">Cataluña</option>
+        <option value="galicia">Galicia</option>
+      </select>
+
+      <label for="provincia" class="titulo">Provincia:</label>
+      <select id="provincia"></select>
+
+      <label for="marca" class="titulo">Marca:</label>
+      <select id="marca" onchange="actualizarModelos()">
+        <option value="toyota">Toyota</option>
+        <option value="ford">Ford</option>
+        <option value="bmw">BMW</option>
+      </select>
+
+      <label for="modelo" class="titulo">Modelo:</label>
+      <select id="modelo"></select>
+
+      <label for="seguro" class="titulo">Tipo seguro:</label>
+      <select name="seguro" id="seguro">
+        <option value="terceros">Terceros</option>
+        <option value="tercerosAmpliado">Terceros ampliado</option>
+        <option value="conFranquicia">Con franquicia</option>
+        <option value="todoRiesgo">Todo riesgo</option>
+      </select>
+
+      <label for="vehiculo" class="titulo">Tipo vehículo:</label>
+      <select name="vehiculo" id="vehiculo">
+        <option value="diesel">Diesel</option>
+        <option value="gasolina">Gasolina</option>
+        <option value="hibrido">Híbrido</option>
+        <option value="electrico">Eléctrico</option>
+      </select>
+
+      <label for="fotoCarnet" class="titulo">Foto carnet conducir</label>
+      <input type="file" name="fotoCarnet" id="fotoCarnet" />
+
+      <label for="terminos" class="titulo">Términos y Condiciones</label>
+      <input type="checkbox" name="terminos" id="terminos" />
+      <label>Acepto</label><br />
+
+      <input type="submit" value="Calcular Seguro" />
+    </form>
+
+    <ul id="errores"></ul>
+    <div id="resultado"></div>
+
+    <script src="../js/aseguradora.js"></script>
+  </body>
+</html>
