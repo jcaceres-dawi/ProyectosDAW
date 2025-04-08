@@ -17,7 +17,10 @@
                             {{ __('💸 Gastos') }}
                         </x-nav-link>
                         <x-nav-link href="{{ url('/html/tetris.html') }}" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
-                            {{ __('🎮 Tetris') }}
+                            {{ __('🕹️ Tetris') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ url('/html/tresraya.html') }}" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
+                            {{ __('🎮 Tres en raya') }}
                         </x-nav-link>
                         <x-nav-link href="{{ url('/html/trello.html') }}" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
                             {{ __('📝 Trello') }}
