@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Route::get('/dashboard', function () {
@@ -21,5 +22,8 @@ Route::middleware('auth')->group(function () {
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
+
+
+Route::resource('expense', ExpenseController::class)->middleware(['auth', 'verified']);
 
 require __DIR__ . '/auth.php';
