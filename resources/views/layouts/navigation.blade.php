@@ -10,24 +10,7 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('chirps.index')" :active="request()->routeIs('chirps.index')">
-                        {{ __('Mensajes') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('expense.index')" :active="request()->routeIs('expense.index')">
-                        {{ __('Gastos') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ url('/html/tetris.html') }}" target="_blank">
-                        {{ __('Tetris') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ url('/html/trello.html') }}" target="_blank">
-                        {{ __('Trello') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ url('/html/aseguradora.html') }}" target="_blank">
-                        {{ __('Aseguradora') }}
-                    </x-nav-link>
-                </div>
+                
             </div>
 
             <!-- Settings Dropdown -->

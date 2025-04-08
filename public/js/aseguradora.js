@@ -228,7 +228,7 @@ function crearTarjetaSeguro(tipoSeguro, precio, edad, añosCarnet, tipoVehiculo,
   tarjeta.appendChild(contratar);
 
   contratar.addEventListener("click", () => {
-    alert("Gracias por contratar. Atentamente tu asesor de seguros Jesús Cáceres Francés");
+    alert("Gracias por contratar. Atentamente tu asesor de seguros");
   });
 
   return tarjeta;
