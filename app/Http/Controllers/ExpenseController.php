@@ -13,7 +13,7 @@ class ExpenseController extends Controller
      */
     public function index(): View
     {
-        $expenses = Expense::where('user_id', auth()->id())->get();
+        $expenses = Expense::where('user_id', auth()->id())->paginate(10);
 
         return view('expense.index', compact('expenses'));
     }

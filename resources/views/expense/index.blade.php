@@ -85,6 +85,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $expenses->links() }}
                     <x-primary-button class='mt-4'><a href="{{ route('expense.create') }}">
                             {{ __('Añadir Gasto') }}
                     </x-primary-button></a>
