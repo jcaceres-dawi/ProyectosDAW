@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PptController;
+
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\DibujoController;
 use App\Http\Controllers\ExpenseController;
@@ -24,6 +26,11 @@ Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
+// PPT
+Route::middleware(['auth'])->group(function () {
+    Route::get('/ppt', [PptController::class, 'index'])->name('ppt.index');
+    Route::post('/ppt/jugar', [PptController::class, 'jugar'])->name('ppt.jugar');
+});
 
 Route::resource('expense', ExpenseController::class)->middleware(['auth', 'verified']);
 
