@@ -31,6 +31,9 @@
                         <x-nav-link :href="route('dibujos.index')" :active="request()->routeIs('dibujos.index')" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
                             {{ __('✏️ Dibujos') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('ppt.index')" :active="request()->routeIs('ppt.index')" class="text-lg py-2 px-4 rounded hover:bg-gray-100 transition">
+                            {{ __('🪨📄✂️ Piedra, Papel o Tijera') }}
+                        </x-nav-link>
                     </nav>
                     <div class="flex justify-center items-center">
                         <img src="{{ asset('images/foto-principal.png') }}" alt="DAW" class="h-auto" style="width: 600px;">
